@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 5 | WP Pusher</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <header>
+        <nav class="nav__bar">
+            <img src="Assignment-5/assets/wppusher-logo.svg" alt="WP Pusher Logo">
+
+            <div class="nav__links">
+                <a href="#">Download</a>
+                <a href="#">Learn more</a>
+                <a href="#">Pricing</a>
+                <a href="#">Help</a>
+                <a href="#">Account</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="checkout">
+
+            <!-- Checkout Form (White Background) -->
+            <section class="checkout__form">
+                <div class="checkout__title">
+                    <h2>Checkout</h2>
+                </div>
+
+                <!-- Basic Information -->
+                <div class="basic__info">
+                    <h3 class="numbered__heading" data-number="1">Your Basic Information</h3>
+
+                    <form action="#" method="post">
+                        <div class="form__grid">
+                            <div class="form__field">
+                                <label for="first-name" class="form__label">First Name</label>
+                                <input class="form__input"
+                                       type="text"
+                                       id="first-name"
+                                       name="first-name"
+                                       placeholder="Jane"
+                                       required
+                                       autocomplete="given-name">
+                            </div>
+
+                            <div class="form__field">
+                                <label for="last-name" class="form__label">Last Name</label>
+                                <input class="form__input"
+                                       type="text"
+                                       id="last-name"
+                                       name="last-name"
+                                       placeholder="Doe"
+                                       required
+                                       autocomplete="family-name">
+                            </div>
+
+                            <div class="form__field full__width">
+                                <label for="email" class="form__label">Email</label>
+                                <input class="form__input"
+                                       type="email"
+                                       id="email"
+                                       name="email"
+                                       placeholder="johndoe@example.com"
+                                       required
+                                       autocomplete="email">
+                            </div>
+                        </div>
+
+                        <!-- Payment Information -->
+                        <div class="payment__info">
+                            <h3 class="numbered__heading" data-number="2">Your Payment Information</h3>
+
+                            <div class="form__field">
+                                <label for="credit-card" class="form__label">Credit Card</label>
+                                <input class="form__input"
+                                       type="text"
+                                       id="credit-card"
+                                       name="credit-card"
+                                       placeholder="Card Number"
+                                       pattern="\d{13,19}"
+                                       maxlength="19"
+                                       inputmode="numeric"
+                                       required
+                                       autocomplete="cc-number">
+                            </div>
+
+                            <div class="form__grid">
+                                <div class="form__field">
+                                    <label for="expiry-date" class="form__label">Expiration Date</label>
+                                    <input class="form__input"
+                                           type="text"
+                                           id="expiry-date"
+                                           name="expiry-date"
+                                           placeholder="MM/YY"
+                                           pattern="(0[1-9]|1[0-2])\/[0-9]{2}"
+                                           required
+                                           autocomplete="cc-exp">
+                                </div>
+
+                                <div class="form__field">
+                                    <label for="cvv" class="form__label">CCV</label>
+                                    <input class="form__input"
+                                           type="text"
+                                           id="cvv"
+                                           name="cvv"
+                                           placeholder="CCV"
+                                           pattern="\d{3,4}"
+                                           maxlength="4"
+                                           required
+                                           autocomplete="cc-csc">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Buy Button -->
+                        <button class="buy__wppusher" type="submit">Buy WP Pusher</button>
+                    </form>
+                </div>
+
+                <!-- Help Support -->
+                <div class="support__container">
+                    <span class="help__icon"></span>
+                    <p>
+                        <strong>Need any help?</strong> Don’t hesitate to <a class="support__link" href="#">contact</a> support!
+                    </p>
+                </div>
+
+                <div class="powered__by">
+                    <p>Powered by</p>
+                    <span class="stripe">Stripe</span>
+                </div>
+            </section>
+
+            <!-- Plan Description (Blue Background) -->
+            <div class="checkout__plan">
+                <div class="plan__content">
+                    <h3>Freelancer</h3>
+
+                    <div class="price">
+                        <span class="price__currency">$</span>
+                        <div>
+                            <span class="price__amount">99</span>
+                            <span class="price__period">/ year</span>
+                        </div>
+                    </div>
+                    <p class="renewal__text">Automatically renews after 1 year</p>
+                </div>
+
+                <!-- List of Plan Benefits -->
+                <div class="benefit__list">
+                    <ul>
+                        <li>Use on <strong>5</strong> client sites</li>
+                        <li>Private repositories</li>
+                        <li>Email support</li>
+                    </ul>
+                </div>
+
+                <div class="switch__plan">
+                    <p>Need <strong>20</strong> client sites? <a href="#">Switch to the Agency plan</a></p>
+                </div>
+
+                <hr class="separating__line">
+
+                <!-- Review -->
+                <blockquote class="text__italic">
+                    <p>FTP is horrible to deal with. <strong>WP Pusher</strong> solves that issue, and the customer support is awesome!</p>
+
+                    <figure class="reviewer">
+                        <img src="Assignment-5/assets/reviewer.svg" alt="Reviewer Image">
+                        <figcaption>Kirk Beard</figcaption>
+                    </figure>
+                </blockquote>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2018 WP Pusher IVS · <a href="#" class="terms">Terms of Service</a></p>
+    </footer>
+</body>
+
+</html>

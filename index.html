@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All CSS Assignments</title>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
+        rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: grid;
+            place-items: center;
+            font-family: "Josefin Sans", serif;
+            padding: 1rem;
+        }
+
+        .container {
+            width: min(650px, 90%);
+            height: auto;
+            min-height: 500px;
+            padding: 1.5rem;
+            box-shadow: rgba(0, 0, 0, 0.15) 2px 2px 8px;
+        }
+
+        .title {
+            margin: 0.5rem 0;
+            text-align: center;
+            padding-bottom: 1rem;
+        }
+
+        .title p {
+            margin: 0.5rem 0 0 7rem;
+            max-width: 420px;
+            font-weight: 500;
+        }
+
+        .container h1 {
+            font-size: clamp(1.5rem, 4vw, 2rem);
+            margin: 0.5rem 0;
+            color: #011C34;
+        }
+
+        .description {
+            text-align: center;
+            max-width: 80%;
+            margin: 0.5rem auto;
+            line-height: 1.4;
+            color: #011C34;
+        }
+
+        .columns__wrapper {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        .column {
+            width: 100%;
+        }
+
+        ol {
+            padding-left: 2.5rem;
+            margin: 0;
+        }
+
+        li {
+            position: relative;
+            color: #4F4F4F;
+            padding: 0 1rem;
+            margin-top: 1.5rem;
+            font-size: 1rem;
+            line-height: 1.4;
+        }
+
+        li:before {
+            content: '';
+            display: block;
+            width: 32px;
+            height: 32px;
+            top: -7px;
+            left: -28px;
+            border-radius: 50%;
+            border: 2px solid #ddd;
+            position: absolute;
+        }
+
+        .open__link {
+            position: absolute;
+            right: 40%;
+            top: 2%;
+            width: 20px;
+            height: 20px;
+            opacity: 0.6;
+            cursor: pointer;
+            background: url("./open-icon.svg") no-repeat;
+            transition: opacity 0.2s ease;
+            text-decoration: none;
+        }
+
+        .open__link:hover {
+            opacity: 1;
+        }
+
+        li a {
+            color: #011C34;
+            text-decoration: none;
+            transition: opacity 0.2s ease;
+        }
+
+        li a:hover {
+            opacity: 0.7;
+        }
+
+        ol.alt__colors li:nth-child(odd):before {
+            border-color: #0BAD02;
+        }
+
+        ol.alt__colors li:nth-child(even):before {
+            border-color: #2378D5;
+        }
+
+        li p {
+            margin-top: 0.5rem;
+            margin-bottom: 0;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+                margin: 0.5rem;
+            }
+
+            .description {
+                max-width: 100%;
+            }
+
+            li {
+                padding-right: 2rem;
+            }
+
+            .open__link {
+                right: 40%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 2rem 0.7rem;
+            }
+
+            ol {
+                padding-left: 2rem;
+            }
+
+            li:before {
+                width: 24px;
+                height: 24px;
+                left: -24.5px;
+                top: -3px;
+            }
+
+            .column-2 {
+                margin-top: -20px;
+            }
+
+            .open__link {
+                right: 40%;
+            }
+
+            .title {
+                margin: 0;
+                text-align: center;
+                padding-bottom: 0;
+            }
+
+            .title p {
+                margin: 0.5rem 0 0 0.5rem;
+                max-width: 360px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <section class="container">
+        <div class="title">
+            <h1>Adeleke Onanuga</h1>
+            <p>ALT/SOE/024/2409</p>
+            <p class="description">Click on "asignment" or the small arrow icon beside each assignment to open it.</p>
+        </div>
+
+        <div class="columns__wrapper">
+            <div class="column">
+                <ol class="alt__colors">
+                    <li>
+                        <a class="click__open" href="Assignment 1\index.html" target="_blank">
+                            <strong>Assignment 1</strong>
+                        </a>
+                        <a href="Assignment 1\index.html" class="open__link" target="_blank"></a>
+                        <p>An "Otter Essay" webpage demonstrating css positioning.</p>
+                    </li>
+                    <li>
+                        <a class="click__open" href="Assignment 2\index.html" target="_blank">
+                            <strong>Assignment 2</strong>
+                        </a>
+                        <a href="Assignment 2\index.html" class="open__link" target="_blank"></a>
+                        <p>Huckleberry Agency page, showcasing css box model and responsiveness.</p>
+                    </li>
+                    <li>
+                        <a class="click__open" href="Assignment 3\index.html" target="_blank">
+                            <strong>Assignment 3</strong>
+                        </a>
+                        <a href="Assignment 3\index.html" class="open__link" target="_blank"></a>
+                        <p>"Novus Watch Series IV" Product card.</p>
+                    </li>
+                </ol>
+            </div>
+
+            <div class="column column-2">
+                <ol class="alt__colors" start="4">
+                    <li>
+                        <a class="click__open" href="Assignment 4\index.html" target="_blank">
+                            <strong>Assignment 4</strong>
+                        </a>
+                        <a href="Assignment 4\index.html" class="open__link" target="_blank"></a>
+                        <p>Responsive Wellness program registration form.</p>
+                    </li>
+                    <li>
+                        <a class="click__open" href="Assignment 5\index.html" target="_blank">
+                            <strong>Assignment 5</strong>
+                        </a>
+                        <a href="Assignment 5\index.html" class="open__link" target="_blank"></a>
+                        <p>WP Pusher checkout page demonstrating core css fundamentals.</p>
+                    </li>
+                    <li>
+                        <a class="click__open" href="Assignment 6\index.html" target="_blank">
+                            <strong>Assignment 6</strong>
+                        </a>
+                        <a href="Assignment 6\index.html" class="open__link" target="_blank"></a>
+                        <p>"Scissors", a landing page for url shortner.</p>
+                    </li>
+                </ol>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
